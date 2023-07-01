@@ -21,7 +21,7 @@ class FollowersOrder(Enum):
 # Empty object shared between class
 class Settings(object):
     __slots__ = ["logger", "streamer_settings",
-                 "enable_analytics", "disable_ssl_cert_verification"]
+                 "enable_analytics", "disable_ssl_cert_verification", "disable_at_in_nickname"]
 
 
 class Events(Enum):
@@ -43,6 +43,7 @@ class Events(Enum):
     JOIN_RAID = auto()
     DROP_CLAIM = auto()
     DROP_STATUS = auto()
+    CHAT_MENTION = auto()
 
     def __str__(self):
         return self.name
